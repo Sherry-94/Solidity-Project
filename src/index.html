@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Creation Smart Contract</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">User Creation Smart Contract</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+	  
+		<!-- Takes the Address of the account to be set into the accounts map -->
+      <div class="row">
+        <label>Input the Account Address to be Set</label>
+		<input type="text" id="setAccountAddress" placeholder="Enter" />
+		<button class="btn btn-default btn-pressed"  type="button" data-id="0">Set</button>
+      </div>
+	  
+	  <!-- Checks if given the address is contained in the accounts map -->
+	<div class="row">
+		<label>Check if the user has been set</label>
+		<input type="text" id="CheckAccountAddress" placeholder="Enter" />
+		<button class="btn btn-default btn-CheckPressed"  type="button" data-id="0">Check</button>
+	</div>
+	  
+	  <br/>
+	<div class="row">
+		<h4> Register a User</h4>
+		<div class="col-sm-6">
+			<label>Input the Account Address</label>
+			<input type="text" id="UserAccountAddress" placeholder="Enter" />
+			
+		</div>
+		<div  class="col-sm-6">
+			<label>Input user Name</label>
+			<input type="text" id="UserName" placeholder="Enter" />	
+		</div>
+	</div>
+	<div class="row" >
+		<button class="btn btn-default btn-UserPressed"  type="button" data-id="0">Create User</button>
+	</div>
+	  
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
