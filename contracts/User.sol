@@ -13,24 +13,24 @@ contract User{
         _;
     }
     
-    function User ()
+    constructor () public
     {
         owner = msg.sender;
     }
     struct UserStruct {
         string name;
     }
-    function SetUser(address _account) OnlyOwner
+    function SetUser(address _account) public OnlyOwner
     {
         AddedAccounts[_account] = true;
     }
-    function AccountAdded(address _account) returns(bool)
+    function AccountAdded(address _account)public returns(bool)
     {
         emit HasBeenSet(_account,AddedAccounts[_account]);
         return AddedAccounts[_account];
     }
     
-    function CreateUser(address _account, string _name) returns(bool)
+    function CreateUser(address _account, string _name) public returns(bool)
     {
         if(AccountAdded(_account))
         {
