@@ -11,8 +11,7 @@ contract User{
     {
         require(msg.sender==owner);
         _;
-    }
-    
+    }   
     constructor () public
     {
         owner = msg.sender;
@@ -28,8 +27,7 @@ contract User{
     {
         emit HasBeenSet(_account,AddedAccounts[_account]);
         return AddedAccounts[_account];
-    }
-    
+    }   
     function CreateUser(address _account, string _name) public returns(bool)
     {
         if(AccountAdded(_account))
