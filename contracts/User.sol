@@ -1,8 +1,15 @@
 pragma solidity ^0.4.2;
 
 contract User{
+
+    // holds the addresses that have been approved to be added as a user
+    
     mapping (address => bool) private AddedAccounts;
+    
+    // holds the users list for every address
+    
     mapping (address => UserStruct) private _Accounts;
+    
     address private owner;
     event HasBeenSet(address _account, bool Val);
     event UserAdded(address _account,string Name, bool val);
